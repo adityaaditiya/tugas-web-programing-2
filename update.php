@@ -29,7 +29,7 @@
 
     $query1 = "select * from mhs where username='$username' or email='$email'";
     $count = $koneksi->query($query1);
-    if($count->num_rows > 0){
+    if($count->num_rows > 1){
         echo "Username atau Email sudah terdaftar, mohon periksa kembali!";
         echo '<a href="index.php">Kembali ke halaman awal</a>';
         return;
